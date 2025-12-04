@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>中部おすすめスポット | 旅マップ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="assets/css/style-home.css">
+
+<!-- 中部ページ用内部埋め込み -->
+<style>
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 0%,
+    #e0f7fa 40%,
+    #b2dfdb 70%,
+    #e8f5e9 100%
+  );
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.brand h1 {
+  color: #00695c;
+}
+
+.site-header {
+  background: transparent; /* 背景はbodyのグラデーションに任せる */
+  border-bottom: 4px solid #388e3c; /* 関東らしい鮮やかなブルー */
+  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影 */
+}
+
+.tagline a,
+.tagline a:link,
+.tagline a:visited,
+.tagline a:hover,
+.tagline a:active,
+.tagline a:focus {
+  text-decoration: none !important; /* 下線を完全に消す */
+  color: inherit;                   /* 親の色を継承（必要なら別色に変更可） */
+}
+
+footer {
+  margin-top: auto; /* コンテンツの最後に押し出す */
+  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+}
+
+/* グリッド（北海道・東北・関東と同じ要領） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2列表示 */
+    gap: 1.5rem;
+  }
+  .card .thumb {
+    max-width: 80%;
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1列表示 */
+    gap: 1.2rem;
+  }
+  .card .thumb {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card .title {
+    font-size: 1.3rem;
+  }
+  .card .desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* カード */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.1rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 3px solid #80cbc4; /* 中部カラー */
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(38, 166, 154, 0.5); /* 中部カラーで影 */
+}
+
+.card .thumb {
+  width: 80%;          /* 北海道・東北・関東と同じ80%に統一 */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  border-radius: 1rem;
+}
+
+.card .title {
+  color: #00695c;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.card .meta {
+  color: #00796b;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.card .desc {
+  color: #004d40;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 中部専用戻るボタン */
+.back-button.chubu {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #c8e6c9, #81c784);
+  color: #1b5e20;
+  font-weight: bold;
+  border: 1px solid #388e3c;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button.chubu:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>中部おすすめスポット</h1></div>
+  <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
+</header>
+
+<main class="grid">
+
+<!-- 1. 熱海 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chubu/chubu01.png" alt="夏の熱海海岸と高層ホテルが並ぶ温泉街">
+  <h2 class="title">熱海 (静岡県)</h2>
+  <p class="desc">海沿いの温泉街と美しい海岸線が魅力。花火大会や温泉巡りで四季を楽しめる観光地。</p>
+</article>
+
+<!-- 2. 白川郷 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chubu/chubu02.png" alt="雪景色の白川郷の合掌造り集落">
+  <h2 class="title">白川郷 (岐阜県)</h2>
+  <p class="desc">合掌造りの集落が残る歴史的景観。雪景色との調和が幻想的。</p>
+</article>
+
+<!-- 3. 兼六園 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chubu/chubu03.png" alt="池に映る茅葺きの建物と紅葉の兼六園">
+  <h2 class="title">兼六園 (石川県)</h2>
+  <p class="desc">四季折々の美しい庭園風景が楽しめる。雪吊りの冬景色も有名。</p>
+</article>
+
+<!-- 4. 黒部ダム -->
+<article class="card">
+  <img class="thumb" src="assets/images/chubu/chubu04.png" alt="黒部ダムと歩道を歩く人々">
+  <h2 class="title">黒部ダム (富山県)</h2>
+  <p class="desc">迫力ある放水と立山連峰の絶景が楽しめる観光スポット。</p>
+</article>
+
+<!-- 5. 松本城 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chubu/chubu05.png" alt="黒い外観が特徴の国宝・松本城">
+  <h2 class="title">松本城 (長野県)</h2>
+  <p class="desc">現存する五重六階の天守を持つ国宝。</p>
+</article>
+
+</main>
+
+<footer>
+  <nav class="region-nav">
+    <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
+    <a href="tohoku.html" class="back-button tohoku">東北おすすめスポットへ</a>
+    <a href="kanto.html" class="back-button kanto">関東おすすめスポットへ</a>
+    <a href="kinki.html" class="back-button kinki">近畿おすすめスポットへ</a>
+    <a href="chugoku-shikoku.html" class="back-button chugoku-shikoku">中国・四国おすすめスポットへ</a>
+    <a href="kyushu-okinawa.html" class="back-button kyushu-okinawa">九州・沖縄おすすめスポットへ</a>
+  </nav>
+</footer>
+
+</body>
+
+</html>

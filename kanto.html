@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>関東おすすめスポット | 旅マップ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="assets/css/style-home.css">
+
+<!-- 関東ページ用内部埋め込み -->
+<style>
+
+body {
+  background: linear-gradient(to bottom, #5c6bc0, #9fa8da);
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto; /* コンテンツの最後に押し出す */
+  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+}
+
+/* グリッド（北海道・東北と同じ） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2列表示 */
+    gap: 1.5rem;
+  }
+  .card .thumb {
+    max-width: 80%;
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1列表示 */
+    gap: 1.2rem;
+  }
+  .card .thumb {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card .title {
+    font-size: 1.3rem;
+  }
+  .card .desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.site-header {
+  background: transparent; /* 背景はbodyのグラデーションに任せる */
+  border-bottom: 4px solid #3949ab; /* 関東らしい鮮やかなブルー */
+  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影 */
+}
+
+/* カード */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff; /* 白ベース */
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.1rem 1rem;
+  box-shadow: none; /* ← 通常時は影なし */
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(57, 73, 171, 0.5); /* ← 選択時だけ関東ブルーの影 */
+}
+
+.card .thumb {
+  width: 80%;          /* 北海道・東北と同じ80%に統一 */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  border-radius: 1rem;
+}
+
+.card .title {
+  color: #303f9f; /* 関東カラー */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.card .meta {
+  color: #3949ab; /* 関東カラー */
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.card .desc {
+  color: #1a237e; /* 関東カラー */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 関東専用戻るボタン */
+.back-button.kanto {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #5c6bc0, #9fa8da);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-button.kanto:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>関東おすすめスポット</h1>
+  <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
+</header>
+
+<main class="grid">
+
+<!-- 1. 浅草寺 -->
+<article class="card">
+  <img class="thumb" src="assets/images/kanto/kanto01.png" alt="雷門と赤い提灯が印象的な浅草寺の正面風景">
+  <h2 class="title">浅草寺 (東京都)</h2>
+  <p>東京を代表する観光地。雷門と赤い提灯がシンボル。</p>
+</article>
+
+<!-- 2. 東京スカイツリー -->
+<article class="card">
+<img class="thumb" src="assets/images/kanto/kanto02.png" alt="東京スカイツリーと周囲の都市景観を見下ろす高層ビュー">
+  <h2 class="title">東京スカイツリー (東京都)</h2>
+  <p>高さ634mのタワーから東京の大パノラマを一望できる。</p>
+</article>
+
+<!-- 3. 横浜みなとみらい -->
+<article class="card">
+<img class="thumb" src="assets/images/kanto/kanto03.png" alt="観覧車とランドマークタワーが並ぶ横浜みなとみらいのベイエリア">
+  <h2 class="title">横浜みなとみらい (神奈川県)</h2>
+  <p>ランドマークタワーや観覧車が輝くベイエリア。夜景が美しい。</p>
+  </div>
+</article>
+
+<!-- 4. 江の島 -->
+<article class="card">
+<img class="thumb" src="assets/images/kanto/kanto04.png" alt="海に囲まれた江の島と展望灯台、晴れた日の湘南の風景">
+  <h2 class="title">江の島 (神奈川県)</h2>
+  <p>海と島の景観が美しい湘南のシンボル。</p>
+</article>
+
+<!-- 5. 国営ひたち海浜公園 -->
+<article class="card">
+<img class="thumb" src="assets/images/kanto/kanto05.png" alt="丘の上に広がる国営ひたち海浜公園の絶景花畑">
+  <h2 class="title">国営ひたち海浜公園 (茨城県)</h2>
+  <p>四季折々の花々が咲き誇る関東屈指の花の名所。</p>
+</article>
+
+</main>
+
+<footer>
+  <nav class="region-nav">
+    <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
+    <a href="tohoku.html" class="back-button tohoku">東北おすすめスポットへ</a>
+    <a href="chubu.html" class="back-button chubu">中部おすすめスポットへ</a>
+    <a href="kinki.html" class="back-button kinki">近畿おすすめスポットへ</a>
+    <a href="chugoku-shikoku.html" class="back-button chugoku-shikoku">中国・四国おすすめスポットへ</a>
+    <a href="kyushu-okinawa.html" class="back-button kyushu-okinawa">九州・沖縄おすすめスポットへ</a>
+  </nav>
+</footer>
+
+</body>
+
+</html>

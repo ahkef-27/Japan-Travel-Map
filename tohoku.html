@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>東北おすすめスポット | 旅マップ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="assets/css/style-home.css">
+
+<!-- 東北ページ用内部埋め込み -->
+<style>
+
+body {
+  background: linear-gradient(
+    to bottom right,
+  #ffffff 0%,
+  #e8f5e9 40%,
+  #c8e6c9 70%,
+  #f1f8e9 100%
+  );
+  background-attachment: fixed;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.brand h1 {
+  color: #2e7d32;
+}
+
+.tagline {
+  color: #388e3c;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
+}
+
+footer {
+  margin-top: auto; /* コンテンツの最後に押し出す */
+  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+}
+
+/* グリッド（北海道と同じ要領） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+/* カード */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.1rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  border-color: #2e7d32;
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.5);
+}
+
+.card .thumb {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.1rem auto;
+  border-radius: 1rem;
+}
+
+.card .title {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.card .meta {
+  color: #388e3c;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.card .desc {
+  color: #1b5e20;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 東北専用戻るボタン */
+.back-button.tohoku {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #66bb6a, #43a047);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button.tohoku:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.site-header {
+  background: #e8f5e9;                 /* 淡い緑系の背景 */
+  border-bottom: 4px solid #4caf50;    /* ← 東北らしい濃い緑で線を強調 */
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.4); /* 緑系の影で統一感 */
+}
+
+.title-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.title-meta .title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.title-meta .meta {
+  font-size: 0.95rem;
+  color: #388e3c;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>東北おすすめスポット</h1>
+  <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
+</header>
+
+<main class="grid">
+
+<!-- 1. 白神山地 -->
+<article class="card">
+  <img class="thumb" src="assets/images/tohoku/tohoku01.png" alt="秋色に染まる白神山地の山並み">
+  <h2 class="title">白神山地 (青森県)</h2>
+  <p>日本屈指の桜の名所。お堀に映る桜と城のコントラストが美しい。</p>
+</article>
+
+<!-- 2. 田沢湖 -->
+<article class="card">
+  <img class="thumb" src="assets/images/tohoku/tohoku02.png" alt="田沢湖畔の金色のたつこ像と紅葉">
+  <h2 class="title">田沢湖 (秋田県)</h2>
+  <p>秋には峡谷全体が赤や黄色に染まり、絶景の紅葉スポットとなる。</p>
+</article>
+
+<!-- 3. 伊達政宗像 -->
+<article class="card">
+  <img class="thumb" src="assets/images/tohoku/tohoku03.png" alt="青空に映える伊達政宗の騎馬像">
+  <h2 class="title">伊達政宗像 (宮城県)</h2>
+  <p>仙台城跡に立つ伊達政宗公騎馬像。仙台のシンボルとして観光客に人気。</p>
+</article>
+
+<!-- 4. 松島 -->
+<article class="card">
+  <img class="thumb" src="assets/images/tohoku/tohoku04.png" alt="松島湾に浮かぶ緑の小島と静かな海">
+  <h2 class="title">松島 (宮城県)</h2>
+  <p>大小260余りの島々が織りなす絶景。遊覧船からの眺めも人気。</p>
+</article>
+
+<!-- 5. 鶴ヶ城 -->
+<article class="card">
+  <img class="thumb" src="assets/images/tohoku/tohoku05.png" alt="青空に映える白壁の鶴ヶ城">
+  <h2 class="title">鶴ヶ城 (福島県)</h2>
+  <p>赤瓦の天守閣が美しい名城。桜や紅葉、雪景色と四季折々の姿が楽しめる。</p>
+</article>
+
+</main>
+
+<footer>
+  <nav class="region-nav">
+    <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
+    <a href="kanto.html" class="back-button kanto">関東おすすめスポットへ</a>
+    <a href="chubu.html" class="back-button chubu">中部おすすめスポットへ</a>
+    <a href="kinki.html" class="back-button kinki">近畿おすすめスポットへ</a>
+    <a href="chugoku-shikoku.html" class="back-button chugoku-shikoku">中国・四国おすすめスポットへ</a>
+    <a href="kyushu-okinawa.html" class="back-button kyushu-okinawa">九州・沖縄おすすめスポットへ</a>
+  </nav>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>中国・四国おすすめスポット | 旅マップ</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="assets/css/style-home.css">
+
+<!-- 中国・四国ページ用内部埋め込み -->
+<style>
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 0%,
+    #e3f2fd 40%,
+    #bbdefb 70%,
+    #e8f5e9 100%
+  );
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.site-header {
+  background: #e3f2fd;                 /* 淡い青白の背景 */
+  border-bottom: 4px solid #bbdefb;    /* 淡い青白の線に変更 */
+  box-shadow: 0 4px 10px rgba(187, 222, 251, 0.4); /* 影も淡い青系で */
+}
+
+.brand h1 { 
+  color: #1565c0;
+}
+
+.tagline {
+  color: #1e88e5;
+}
+
+footer {
+  margin-top: auto; /* コンテンツの最後に押し出す */
+  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+}
+
+/* グリッド（北海道・東北・関東・中部・近畿と同じ要領） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2列表示 */
+    gap: 1.5rem;
+  }
+  .card .thumb {
+    max-width: 80%;
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1列表示 */
+    gap: 1.2rem;
+  }
+  .card .thumb {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card .title {
+    font-size: 1.3rem;
+  }
+  .card .desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* カード */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.1rem 1rem; /* 北海道と同じ余白設定 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 3px solid #90caf9; /* 中国・四国カラー */
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(66, 165, 245, 0.5); /* 中国・四国カラーで影 */
+}
+
+.card .thumb {
+  width: 80%;/* 北海道・東北・関東・中部・近畿と同じ80%に統一 */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  border-radius: 1rem;
+}
+
+.card .title {
+  color: #1565c0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.card .meta { 
+  color: #1e88e5;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.card .desc {
+  color: #0d47a1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 中国・四国専用戻るボタン */
+.back-button.chugoku-shikoku {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #d1c4e9, #b39ddb);
+  color: #4a148c;
+  font-weight: bold;
+  border: 1px solid #7e57c2;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button.chugoku-shikoku:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="brand"><h1>中国・四国おすすめスポット</h1></div>
+  <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
+</header>
+
+<main class="grid">
+
+<!-- 1. 厳島神社 -->
+<article class="card">
+<img class="thumb" src="assets/images/chugoku-shikoku/chugoku-shikoku01.png" alt="満潮時に海に浮かぶように見える厳島神社の大鳥居と社殿">
+  <h2 class="title">厳島神社 (広島)</h2>
+  <p class="desc">海に浮かぶ大鳥居で有名な神社。満潮時の幻想的な景観は必見。</p>
+</article>
+
+<!-- 2. 鳴門の渦潮 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chugoku-shikoku/chugoku-shikoku02.png" alt="鳴門海峡で発生する世界最大級の渦潮の迫力ある様子">
+  <h2 class="title">鳴門の渦潮 (徳島)</h2>
+  <p class="desc">世界最大級の渦潮が見られるスポット。迫力ある自然現象を体感できる。</p>
+</article>
+
+<!-- 3. しまなみ海道 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chugoku-shikoku/chugoku-shikoku03.png" alt="瀬戸内海に架かるしまなみ海道の橋と青い海">
+  <h2 class="title">しまなみ海道 (愛媛)</h2>
+  <p class="desc">瀬戸内海の島々を結ぶ橋の連続。絶景を楽しみながらサイクリングが人気。</p>
+</article>
+
+<!-- 4. 鷲羽山からの瀬戸大橋 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chugoku-shikoku/chugoku-shikoku04.png" alt="鷲羽山から望む瀬戸大橋と瀬戸内海の多島美">
+  <h2 class="title">瀬戸大橋 (岡山県・香川県)</h2>
+  <p class="desc">本州と四国を結ぶ壮大な橋。展望台からの眺めは圧巻。</p>
+</article>
+
+<!-- 5. 道後温泉 -->
+<article class="card">
+  <img class="thumb" src="assets/images/chugoku-shikoku/chugoku-shikoku05.png" alt="道後温泉本館と正面玄関の伝統的な和風建築">
+  <h2 class="title">道後温泉 (愛媛県)</h2>
+  <p class="desc">日本三古湯のひとつ。歴史ある温泉街で癒しのひとときを。</p>
+</article>
+
+</main>
+
+<footer>
+  <nav class="region-nav">
+    <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
+    <a href="tohoku.html" class="back-button tohoku">東北おすすめスポットへ</a>
+    <a href="kanto.html" class="back-button kanto">関東おすすめスポットへ</a>
+    <a href="chubu.html" class="back-button chubu">中部おすすめスポットへ</a>
+    <a href="kinki.html" class="back-button kinki">近畿おすすめスポットへ</a>
+    <a href="kyushu-okinawa.html" class="back-button kyushu-okinawa">九州・沖縄おすすめスポットへ</a>
+  </nav>
+</footer>
+
+</body>
+
+</html>

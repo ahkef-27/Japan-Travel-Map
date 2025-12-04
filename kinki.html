@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>近畿おすすめスポット | 旅マップ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="assets/css/style-home.css">
+
+<!-- 近畿ページ用内部埋め込み -->
+<style>
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 0%,
+    #fff3e0 40%,
+    #ffe0b2 70%,
+    #ffcc80 100%
+  );
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+
+}
+
+.brand h1 {
+  color: #e65100;
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 6px rgba(230, 81, 0, 0.6);
+}
+
+/* ヘッダー */
+.site-header {
+  background: transparent; /* 背景はbodyのグラデーションに任せる */
+  border-bottom: 4px solid #ffb74d;
+  box-shadow: 0 4px 10px rgba(255, 183, 77, 0.4);
+}
+
+.tagline {
+  color: #f57c00;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(245, 124, 0, 0.4);
+}
+
+footer {
+  margin-top: auto; /* コンテンツの最後に押し出す */
+  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+}
+
+/* グリッド（北海道・東北・関東・中部と同じ要領） */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
+  gap: 1rem;
+  padding: 0.7rem;
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* 2列表示 */
+    gap: 1.5rem;
+  }
+  .card .thumb {
+    max-width: 80%;
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1列表示 */
+    gap: 1.2rem;
+  }
+  .card .thumb {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card .title {
+    font-size: 1.3rem;
+  }
+  .card .desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* カード */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.1rem 1rem; /* 北海道と同じ余白設定 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  border-color: #f57c00;
+  box-shadow: 0 6px 16px rgba(230, 81, 0, 0.5); /* 近畿カラーで影 */
+}
+
+.card .thumb {
+  width: 80%;          /* 北海道・東北・関東・中部と同じ80%に統一 */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  border-radius: 1rem;
+}
+
+.card .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #e65100;
+  text-shadow: 1px 1px 3px rgba(230, 81, 0, 0.4);
+}
+
+.card .desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6d4c41;
+}
+
+/* 近畿専用戻るボタン */
+.back-button.kinki {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #ffe0b2, #ffb74d);
+  color: #e65100;
+  font-weight: bold;
+  border: 1px solid #f57c00;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button.kinki:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>近畿おすすめスポット</h1>
+  <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
+</header>
+
+<main class="grid">
+
+<!-- 1. 京都・清水寺 -->
+<article class="card">
+  <img class="thumb" src="assets/images/kinki/kinki01.png" alt="清水寺の舞台と緑に囲まれた本堂">
+    <h2 class="title">清水寺 (京都)</h2>
+    <p>世界遺産にも登録された京都の代表的な寺院。舞台からの眺めは圧巻。</p>
+  </div>
+</article>
+
+<!-- 2. 奈良・東大寺 -->
+<article class="card">
+  <img class="thumb" src="assets/images/kinki/kinki02.png" alt="東大寺の大仏と荘厳な堂内の様子">
+  <div class="content">
+    <h2 class="title">東大寺 (奈良)</h2>
+    <p>奈良の大仏で有名。歴史と自然が調和する古都の象徴。</p>
+  </div>
+</article>
+
+<!-- 3. 大阪城 -->
+<article class="card">
+  <img class="thumb" src="assets/images/kinki/kinki03.png" alt="石垣の上にそびえる大阪城の天守閣">
+  <div class="content">
+    <h2 class="title">大阪城 (大阪)</h2>
+    <p>豊臣秀吉が築いた名城。桜の季節には花見スポットとしても人気。</p>
+  </div>
+</article>
+
+<!-- 4. 神戸・メリケンパーク -->
+<article class="card">
+  <img class="thumb" src="assets/images/kinki/kinki04.png" alt="神戸ポートタワーと港の街並み">
+  <div class="content">
+    <h2 class="title">神戸・メリケンパーク (兵庫)</h2>
+    <p>港町神戸を象徴するスポット。夜景やポートタワーが美しい。</p>
+  </div>
+</article>
+
+<!-- 5. 和歌山・熊野古道 -->
+<article class="card">
+  <img class="thumb" src="assets/images/kinki/kinki05.png" alt="熊野古道の石畳と杉林に囲まれた参詣道">
+  <div class="content">
+    <h2 class="title">熊野古道 (和歌山)</h2>
+    <p>世界遺産の参詣道。自然と信仰が息づく歴史的な道。</p>
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <nav class="region-nav">
+    <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
+    <a href="tohoku.html" class="back-button tohoku">東北おすすめスポットへ</a>
+    <a href="kanto.html" class="back-button kanto">関東おすすめスポットへ</a>
+    <a href="chubu.html" class="back-button chubu">中部おすすめスポットへ</a>
+    <a href="chugoku-shikoku.html" class="back-button chugoku-shikoku">中国・四国おすすめスポットへ</a>
+    <a href="kyushu-okinawa.html" class="back-button kyushu-okinawa">九州・沖縄おすすめスポットへ</a>
+  </nav>
+</footer>
+
+</body>
+</html>
