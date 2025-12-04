@@ -31,6 +31,7 @@ VS Code（開発環境）
 ページ一覧
 
 ## index.html : トップページ（全国の地域へナビゲーション）
+![トップページ](images/index.png)
 
 ## hokkaido.html : 北海道おすすめスポット
 ![北海道](images/hokkaido.png)
