@@ -1,6 +1,6 @@
 ### Japan Travel Map
 
-![説明文](images/screenshot01.png)
+![説明文](images/Top.png)
 
 
 ## 概要
