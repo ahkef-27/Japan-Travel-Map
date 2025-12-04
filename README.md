@@ -1,7 +1,6 @@
 ### Japan Travel Map
 
-![説明文](images/Top.png)
-
+![アイコン](images/Top.png)
 
 ## 概要
 Japan Travel Map は、日本全国のおすすめスポットを紹介するWebサイトです。北海道から沖縄まで全国をカバーし、統一されたデザインとレスポンシブ対応により、PC・タブレット・スマートフォンから快適に閲覧できます。商用サイトのような予約機能や広告はなく、純粋に「見やすさ」「使いやすさ」「アクセシビリティ」を重視した作品です。情報量よりもUIの統一性や操作性を大切にし、全国を一貫したデザインで表現しています。サイトのスクリーンショットや地域ページの画像をアップロードしており、GitHubリポジトリからもご覧いただけます。
@@ -30,18 +29,25 @@ VS Code（開発環境）
 ## index.html : トップページ（全国の地域へナビゲーション）
 
 ## hokkaido.html : 北海道おすすめスポット
+![北海道](images/hokkaido.png)
 
 ## tohoku.html : 東北おすすめスポット
+![東北](images/tohoku.png)
 
 ## kanto.html : 関東おすすめスポット
+![関東](images/関東.png)
 
 ## chubu.html : 中部おすすめスポット
+![中部](images/chubu.png)
 
 ## kinki.html : 近畿おすすめスポット
+![近畿](images/kinki.png)
 
 ## chugoku-shikoku.html : 中国・四国おすすめスポット
+![中国・四国](images/chugoku-shikoku.png)
 
 ## kyushu-okinawa.html : 九州・沖縄おすすめスポット
+![九州・沖縄](images/kyushu-okinawa.png)
 
 ## assets/css/style-home.css : 共通CSS
 
