@@ -6,14 +6,14 @@
 
 <meta charset="UTF-8">
 
-<title>北海道おすすめスポット | 旅マップ</title>
+<title>東北おすすめスポット | 旅マップ</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- 共通CSS -->
 <link rel="stylesheet" href="assets/css/style-home.css">
 
-<!-- 北海道ページ用内部埋め込み -->
+<!-- 東北ページ用内部埋め込み -->
 <style>
 
 /* ============================= */
@@ -23,13 +23,15 @@ body {
   background: linear-gradient(
     to bottom right,
     #ffffff 0%,
-    #e0f7fa 40%,
-    #b3e5fc 70%,
-    #e1f5fe 100%
+    #e8f5e9 40%,
+    #c8e6c9 70%,
+    #f1f8e9 100%
   );
   background-attachment: fixed;
+  color: #333333;
   display: flex;
   flex-direction: column;
+  font-family: "Noto Sans JP", sans-serif;
   min-height: 100vh;
 }
 
@@ -37,41 +39,22 @@ body {
 /* ヘッダー                      */
 /* ============================= */
 .site-header {
-  background: #e3f2fd;                 /* 淡い青白の背景 */
-  border-bottom: 4px solid #90caf9;    /* 線を淡い青で */
-  box-shadow: 0 4px 10px rgba(144, 202, 249, 0.4);
-}
-
-.site-header .brand h1 {
-  margin: 0;
-  color: #0277bd;
-  font-size: 2rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 6px rgba(2, 119, 189, 0.6);
-}
-
-.site-header .tagline {
-  margin: 0.2rem 0 0.5rem 0;
-  color: #039be5;
-  font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
+  background: #e8f5e9;                 /* 淡い緑系の背景 */
+  border-bottom: 4px solid #4caf50;    /* 東北らしい濃い緑で線を強調 */
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.4); /* 緑系の影で統一感 */
 }
 
 /* ============================= */
 /* 見出し・タグライン (共通)     */
 /* ============================= */
 .brand h1 {
-  margin: 0;
-  color: #0277bd;
-  font-size: 2rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 6px rgba(2, 119, 189, 0.6);
+  color: #2e7d32;
 }
 
 .tagline {
-  margin: 0.2rem 0 0.5rem 0;
-  color: #039be5;
+  color: #388e3c;
   font-weight: bold;
+  margin-bottom: 0.5rem;
   text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
 }
 
@@ -80,7 +63,7 @@ body {
 /* ============================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* PCは3列 */
   gap: 1rem;
   padding: 0.7rem;
 }
@@ -98,55 +81,75 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(3, 155, 229, 0.5); /* 北海道ブルー (#039be5) */
+  border-color: #2e7d32;
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.5);
 }
 
 .card .thumb {
-  border-radius: 1rem;
+  width: 80%;
   height: auto;
-  margin: 0 auto;
-  max-width: 80%;
-  margin-bottom: 0.1rem;
+  display: block;
+  margin: 0 auto 0.1rem auto;
+  border-radius: 1rem;
 }
 
 .card .title {
+  color: #2e7d32;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #2e7d32;
   margin-bottom: 0.2rem;
 }
 
 .card .meta {
-  font-size: 0.95rem;
   color: #388e3c;
+  font-size: 0.95rem;
   margin-bottom: 0.3rem;
 }
 
 .card .desc {
-  font-size: 1rem;
   color: #1b5e20;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
 /* ============================= */
-/* 北海道専用戻るボタン          */
+/* タイトル＋メタ情報            */
 /* ============================= */
-.back-button.hokkaido {
-  display: inline-block;
-  padding: 10px 16px;
-  background: linear-gradient(to right, #e3f2fd, #bbdefb);
-  color: #003366;
+.title-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.title-meta .title {
+  margin: 0;
+  font-size: 1.4rem;
   font-weight: bold;
-  border: 1px solid #90caf9;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: .9rem;
+  color: #2e7d32;
+}
+
+.title-meta .meta {
+  font-size: 0.95rem;
+  color: #388e3c;
+}
+
+/* ============================= */
+/* 東北専用戻るボタン            */
+/* ============================= */
+.back-button.tohoku {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #66bb6a, #43a047);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.back-button.hokkaido:hover {
-  background: #64b5f6;
-  color: #fff;
+.back-button.tohoku:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -166,59 +169,45 @@ footer {
 <body>
 
 <header class="site-header">
-  <h1>北海道おすすめスポット</h1></div>
+  <h1>東北おすすめスポット</h1>
   <p class="tagline">© 2025 旅マップ | 画像は <a href="https://pixabay.com/">Pixabay</a>, <a href="https://www.photo-ac.com/">Photo AC</a> のフリー素材を使用</p>
 </header>
 
 <main class="grid">
 
-<!-- 1行目 -->
-
-<!-- 1. 札幌・大通公園 -->
+<!-- 1. 白神山地 -->
 <article class="card">
-  <img class="thumb" src="assets/images/hokkaido/hokkaido01.png" alt="札幌・大通公園の並木と広場" />
-  <div class="content">
-    <h2 class="title">札幌・大通公園</h2>
-    <p>雪まつりやビアガーデンなど、季節ごとに景色が変わる札幌の中心スポット。</p>
-  </div>
+  <img class="thumb" src="assets/images/tohoku/tohoku01.png" alt="秋色に染まる白神山地の山並み">
+  <h2 class="title">白神山地 (青森県)</h2>
+  <p>日本屈指の桜の名所。お堀に映る桜と城のコントラストが美しい。</p>
 </article>
 
-<!-- 2. 小樽運河 -->
+<!-- 2. 田沢湖 -->
 <article class="card">
-  <img class="thumb" src="assets/images/hokkaido/hokkaido02.png" alt="小樽運河と歴史的な街並み" />
-  <div class="content">
-    <h2 class="title">小樽運河</h2>
-  <p>夕暮れの散策やナイトクルーズで、歴史的な街並みを堪能できる人気スポット。</p>
-  </div>
+  <img class="thumb" src="assets/images/tohoku/tohoku02.png" alt="田沢湖畔の金色のたつこ像と紅葉">
+  <h2 class="title">田沢湖 (秋田県)</h2>
+  <p>秋には峡谷全体が赤や黄色に染まり、絶景の紅葉スポットとなる。</p>
 </article>
 
-<!-- 3. オホーツク海 -->
+<!-- 3. 伊達政宗像 -->
 <article class="card">
-  <img class="thumb" src="assets/images/hokkaido/hokkaido03.png" alt="オホーツク海と砂浜" />
-  <div class="content">
-  <h2 class="title">オホーツク海</h2>
-  <p>北海道の北東に広がる半閉鎖性の海域で、冬季の流氷が最も有名。</p>
-  </div>
+  <img class="thumb" src="assets/images/tohoku/tohoku03.png" alt="青空に映える伊達政宗の騎馬像">
+  <h2 class="title">伊達政宗像 (宮城県)</h2>
+  <p>仙台城跡に立つ伊達政宗公騎馬像。仙台のシンボルとして観光客に人気。</p>
 </article>
 
-<!-- 2行目 -->
-
-<!-- 4. 富良野・ラベンダー畑 -->
+<!-- 4. 松島 -->
 <article class="card">
-  <img class="thumb" src="assets/images/hokkaido/hokkaido04.png" alt="富良野のラベンダー畑と夏の光" />
-  <div class="content">
-  <h2 class="title"> 富良野・ラベンダー畑</h2>
-  <p>ラベンダーの花と花畑のコントラストが圧巻の絶景。</p>
-  </div>
+  <img class="thumb" src="assets/images/tohoku/tohoku04.png" alt="松島湾に浮かぶ緑の小島と静かな海">
+  <h2 class="title">松島 (宮城県)</h2>
+  <p>大小260余りの島々が織りなす絶景。遊覧船からの眺めも人気。</p>
 </article>
 
-<!-- 5. 旭山動物園 -->
+<!-- 5. 鶴ヶ城 -->
 <article class="card">
-  <img class="thumb" src="assets/images/hokkaido/hokkaido05.png" alt="旭山動物園のホッキョクグマ" />
-  <div class="content">
-  <h2 class="title">旭山動物園</h2>
-  <p>近い距離で、生き生きした動物の姿を観察できる。</p>
-  </div>
+  <img class="thumb" src="assets/images/tohoku/tohoku05.png" alt="青空に映える白壁の鶴ヶ城">
+  <h2 class="title">鶴ヶ城 (福島県)</h2>
+  <p>赤瓦の天守閣が美しい名城。桜や紅葉、雪景色と四季折々の姿が楽しめる。</p>
 </article>
 
 </main>
@@ -226,7 +215,7 @@ footer {
 <footer>
   <nav class="region-nav">
     <a href="index.html" class="back-button home">⬅ トップページに戻る</a>
-    <a href="tohoku.html" class="back-button tohoku">東北おすすめスポットへ</a>
+    <a href="hokkaido.html" class="back-button hokkaido">北海道おすすめスポットへ</a>
     <a href="kanto.html" class="back-button kanto">関東おすすめスポットへ</a>
     <a href="chubu.html" class="back-button chubu">中部おすすめスポットへ</a>
     <a href="kinki.html" class="back-button kinki">近畿おすすめスポットへ</a>
