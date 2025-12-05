@@ -12,13 +12,16 @@
 <!-- 近畿ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(
     to bottom right,
     #ffffff 0%,
-    #fff3e0 40%,
-    #ffe0b2 70%,
-    #ffcc80 100%
+    #f3e5f5 40%,
+    #e1bee7 70%,
+    #ede7f6 100%
   );
   background-attachment: fixed;
   color: #333;
@@ -26,36 +29,29 @@ body {
   flex-direction: column;
   font-family: "Noto Sans JP", sans-serif;
   min-height: 100vh;
+}
 
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
+.site-header {
+  background: #f3e5f5;                 /* 淡い紫系の背景 */
+  border-bottom: 4px solid #ab47bc;    /* 近畿らしい鮮やかな紫 */
+  box-shadow: 0 4px 10px rgba(171, 71, 188, 0.4); /* 紫系の影 */
 }
 
 .brand h1 {
-  color: #e65100;
-  font-size: 2.4rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 6px rgba(230, 81, 0, 0.6);
-}
-
-/* ヘッダー */
-.site-header {
-  background: transparent; /* 背景はbodyのグラデーションに任せる */
-  border-bottom: 4px solid #ffb74d;
-  box-shadow: 0 4px 10px rgba(255, 183, 77, 0.4);
+  color: #6a1b9a;
 }
 
 .tagline {
-  color: #f57c00;
-  font-size: 1.3rem;
+  color: #8e24aa;
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(245, 124, 0, 0.4);
 }
 
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
-}
-
-/* グリッド（北海道・東北・関東・中部と同じ要領） */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* PCは3列 */
@@ -63,6 +59,9 @@ footer {
   padding: 0.7rem;
 }
 
+/* ============================= */
+/* レスポンシブ対応              */
+/* ============================= */
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .grid {
@@ -93,50 +92,60 @@ footer {
   }
 }
 
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
   background: #ffffff;
   border-radius: 1rem;
-  padding: 1rem 1rem 0.1rem 1rem; /* 北海道と同じ余白設定 */
+  padding: 1rem 1rem 0.1rem 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 3px solid #ce93d8; /* 近畿カラー */
 }
 
 .card:hover {
-  border-color: #f57c00;
-  box-shadow: 0 6px 16px rgba(230, 81, 0, 0.5); /* 近畿カラーで影 */
+  box-shadow: 0 6px 16px rgba(156, 39, 176, 0.5); /* 近畿カラーで影 */
 }
 
 .card .thumb {
-  width: 80%;          /* 北海道・東北・関東・中部と同じ80%に統一 */
+  width: 80%; /* 北海道・東北・関東・中部・中国四国と同じ80%に統一 */
   height: auto;
   display: block;
-  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  margin: 0 auto 0.1rem auto;
   border-radius: 1rem;
 }
 
 .card .title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #e65100;
-  text-shadow: 1px 1px 3px rgba(230, 81, 0, 0.4);
+  color: #6a1b9a;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.card .meta {
+  color: #8e24aa;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
 }
 
 .card .desc {
+  color: #4a148c;
   font-size: 1rem;
   line-height: 1.6;
-  color: #6d4c41;
 }
 
-/* 近畿専用戻るボタン */
+/* ============================= */
+/* 近畿専用戻るボタン            */
+/* ============================= */
 .back-button.kinki {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(to right, #ffe0b2, #ffb74d);
-  color: #e65100;
+  background: linear-gradient(to right, #e1bee7, #ba68c8);
+  color: #4a148c;
   font-weight: bold;
-  border: 1px solid #f57c00;
+  border: 1px solid #8e24aa;
   border-radius: 0.8rem;
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -145,6 +154,14 @@ footer {
 .back-button.kinki:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
@@ -218,4 +235,5 @@ footer {
 </footer>
 
 </body>
+
 </html>
