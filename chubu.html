@@ -16,6 +16,9 @@
 <!-- 中部ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(
     to bottom right,
@@ -32,17 +35,22 @@ body {
   min-height: 100vh;
 }
 
-/* ヘッダー */
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
+.site-header {
+  background: transparent; /* 背景はbodyのグラデーションに任せる */
+  border-bottom: 4px solid #388e3c; /* 中部らしいグリーン */
+  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影（調整可） */
+}
+
 .brand h1 {
   color: #00695c;
 }
 
-.site-header {
-  background: transparent; /* 背景はbodyのグラデーションに任せる */
-  border-bottom: 4px solid #388e3c; /* 関東らしい鮮やかなブルー */
-  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影 */
-}
-
+/* ============================= */
+/* タグラインリンク              */
+/* ============================= */
 .tagline a,
 .tagline a:link,
 .tagline a:visited,
@@ -50,15 +58,12 @@ body {
 .tagline a:active,
 .tagline a:focus {
   text-decoration: none !important; /* 下線を完全に消す */
-  color: inherit;                   /* 親の色を継承（必要なら別色に変更可） */
+  color: inherit;                   /* 親の色を継承 */
 }
 
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
-}
-
-/* グリッド（北海道・東北・関東と同じ要領） */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* PCは3列 */
@@ -66,6 +71,9 @@ footer {
   padding: 0.7rem;
 }
 
+/* ============================= */
+/* レスポンシブ対応              */
+/* ============================= */
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .grid {
@@ -96,7 +104,9 @@ footer {
   }
 }
 
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
@@ -112,10 +122,10 @@ footer {
 }
 
 .card .thumb {
-  width: 80%;          /* 北海道・東北・関東と同じ80%に統一 */
+  width: 80%; /* 北海道・東北・関東と同じ80%に統一 */
   height: auto;
   display: block;
-  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  margin: 0 auto 0.1rem auto;
   border-radius: 1rem;
 }
 
@@ -138,7 +148,9 @@ footer {
   line-height: 1.6;
 }
 
-/* 中部専用戻るボタン */
+/* ============================= */
+/* 中部専用戻るボタン            */
+/* ============================= */
 .back-button.chubu {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -154,6 +166,14 @@ footer {
 .back-button.chubu:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
