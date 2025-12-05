@@ -16,6 +16,9 @@
 <!-- 北海道ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(
     to bottom right,
@@ -30,7 +33,33 @@ body {
   min-height: 100vh;
 }
 
-/* 見出し */
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
+.site-header {
+  background: #e3f2fd;                 /* 淡い青白の背景 */
+  border-bottom: 4px solid #90caf9;    /* 線を淡い青で */
+  box-shadow: 0 4px 10px rgba(144, 202, 249, 0.4);
+}
+
+.site-header .brand h1 {
+  margin: 0;
+  color: #0277bd;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 6px rgba(2, 119, 189, 0.6);
+}
+
+.site-header .tagline {
+  margin: 0.2rem 0 0.5rem 0;
+  color: #039be5;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
+}
+
+/* ============================= */
+/* 見出し・タグライン (共通)     */
+/* ============================= */
 .brand h1 {
   margin: 0;
   color: #0277bd;
@@ -39,41 +68,16 @@ body {
   text-shadow: 2px 2px 6px rgba(2, 119, 189, 0.6);
 }
 
-/* タグライン */
 .tagline {
-  margin: 0.2rem 0 0.5rem 0;           /* 中四国と同じ余白設定 */
+  margin: 0.2rem 0 0.5rem 0;
   color: #039be5;
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
 }
 
-/* 北海道専用戻るボタン */
-.back-button.hokkaido {
-  display: inline-block;
-  padding: 10px 16px;
-  background: linear-gradient(to right, #e3f2fd, #bbdefb);
-  color: #003366;
-  font-weight: bold;
-  border: 1px solid #90caf9;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: .9rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.back-button.hokkaido:hover {
-  background: #64b5f6;
-  color: #fff;
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
-}
-
-/* グリッド */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,29 +85,9 @@ footer {
   padding: 0.7rem;
 }
 
-/* ヘッダー */
-.site-header {
-  background: #e3f2fd;                 /* 淡い青白の背景 */
-  border-bottom: 4px solid #90caf9;    /* 線を淡い青で */
-  box-shadow: 0 4px 10px rgba(144, 202, 249, 0.4);
-}
-
-.site-header .brand h1 {
-  margin: 0;                           /* h1の余白をリセット */
-  color: #0277bd;
-  font-size: 2rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 6px rgba(2, 119, 189, 0.6);
-}
-
-.site-header .tagline {
-  margin: 0.2rem 0 0.5rem 0;           /* ← 中四国と同じ余白設定 */
-  color: #039be5;
-  font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(3, 155, 229, 0.4);
-}
-
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
@@ -114,7 +98,7 @@ footer {
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(3, 155, 229, 0.5); /* 北海道ブルー (#039be5) を使った影 */
+  box-shadow: 0 6px 16px rgba(3, 155, 229, 0.5); /* 北海道ブルー (#039be5) */
 }
 
 .card .thumb {
@@ -142,6 +126,37 @@ footer {
   font-size: 1rem;
   color: #1b5e20;
   line-height: 1.6;
+}
+
+/* ============================= */
+/* 北海道専用戻るボタン          */
+/* ============================= */
+.back-button.hokkaido {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  color: #003366;
+  font-weight: bold;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.back-button.hokkaido:hover {
+  background: #64b5f6;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
@@ -221,4 +236,5 @@ footer {
 </footer>
 
 </body>
+
 </html>
