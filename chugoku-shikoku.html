@@ -16,6 +16,9 @@
 <!-- 中国・四国ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(
     to bottom right,
@@ -32,11 +35,13 @@ body {
   min-height: 100vh;
 }
 
-/* ヘッダー */
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
 .site-header {
   background: #e3f2fd;                 /* 淡い青白の背景 */
-  border-bottom: 4px solid #bbdefb;    /* 淡い青白の線に変更 */
-  box-shadow: 0 4px 10px rgba(187, 222, 251, 0.4); /* 影も淡い青系で */
+  border-bottom: 4px solid #bbdefb;    /* 淡い青白の線 */
+  box-shadow: 0 4px 10px rgba(187, 222, 251, 0.4); /* 淡い青系の影 */
 }
 
 .brand h1 { 
@@ -45,14 +50,12 @@ body {
 
 .tagline {
   color: #1e88e5;
+  font-weight: bold;
 }
 
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
-}
-
-/* グリッド（北海道・東北・関東・中部・近畿と同じ要領） */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* PCは3列 */
@@ -60,6 +63,9 @@ footer {
   padding: 0.7rem;
 }
 
+/* ============================= */
+/* レスポンシブ対応              */
+/* ============================= */
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .grid {
@@ -90,7 +96,9 @@ footer {
   }
 }
 
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
@@ -106,10 +114,10 @@ footer {
 }
 
 .card .thumb {
-  width: 80%;/* 北海道・東北・関東・中部・近畿と同じ80%に統一 */
+  width: 80%; /* 他地域と同じ80%に統一 */
   height: auto;
   display: block;
-  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  margin: 0 auto 0.1rem auto;
   border-radius: 1rem;
 }
 
@@ -132,7 +140,9 @@ footer {
   line-height: 1.6;
 }
 
-/* 中国・四国専用戻るボタン */
+/* ============================= */
+/* 中国・四国専用戻るボタン      */
+/* ============================= */
 .back-button.chugoku-shikoku {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -148,6 +158,14 @@ footer {
 .back-button.chugoku-shikoku:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
