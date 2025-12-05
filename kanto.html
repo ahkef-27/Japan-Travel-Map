@@ -16,6 +16,9 @@
 <!-- 関東ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(to bottom, #5c6bc0, #9fa8da);
   background-attachment: fixed;
@@ -26,12 +29,18 @@ body {
   min-height: 100vh;
 }
 
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
+.site-header {
+  background: transparent; /* 背景はbodyのグラデーションに任せる */
+  border-bottom: 4px solid #3949ab; /* 関東らしい鮮やかなブルー */
+  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影 */
 }
 
-/* グリッド（北海道・東北と同じ） */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* PCは3列 */
@@ -39,6 +48,9 @@ footer {
   padding: 0.7rem;
 }
 
+/* ============================= */
+/* レスポンシブ対応              */
+/* ============================= */
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .grid {
@@ -69,31 +81,27 @@ footer {
   }
 }
 
-.site-header {
-  background: transparent; /* 背景はbodyのグラデーションに任せる */
-  border-bottom: 4px solid #3949ab; /* 関東らしい鮮やかなブルー */
-  box-shadow: 0 4px 10px rgba(57, 73, 171, 0.3); /* 青系の柔らかい影 */
-}
-
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
   background: #ffffff; /* 白ベース */
   border-radius: 1rem;
   padding: 1rem 1rem 0.1rem 1rem;
-  box-shadow: none; /* ← 通常時は影なし */
+  box-shadow: none; /* 通常時は影なし */
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(57, 73, 171, 0.5); /* ← 選択時だけ関東ブルーの影 */
+  box-shadow: 0 6px 16px rgba(57, 73, 171, 0.5); /* 関東ブルーの影 */
 }
 
 .card .thumb {
-  width: 80%;          /* 北海道・東北と同じ80%に統一 */
+  width: 80%; /* 北海道・東北と同じ80%に統一 */
   height: auto;
   display: block;
-  margin: 0 auto 0.1rem auto; /* 下の余白を最小限に */
+  margin: 0 auto 0.1rem auto;
   border-radius: 1rem;
 }
 
@@ -116,7 +124,9 @@ footer {
   line-height: 1.6;
 }
 
-/* 関東専用戻るボタン */
+/* ============================= */
+/* 関東専用戻るボタン            */
+/* ============================= */
 .back-button.kanto {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -132,6 +142,14 @@ footer {
 .back-button.kanto:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
