@@ -16,6 +16,9 @@
 <!-- 九州・沖縄ページ用内部埋め込み -->
 <style>
 
+/* ============================= */
+/* ベース設定 (body)             */
+/* ============================= */
 body {
   background: linear-gradient(
     to bottom right,
@@ -32,7 +35,9 @@ body {
   min-height: 100vh;
 }
 
-/* ヘッダー */
+/* ============================= */
+/* ヘッダー                      */
+/* ============================= */
 .site-header {
   background: #e0f7fa;
   box-shadow: 0 4px 10px rgba(38, 198, 218, 0.3);
@@ -44,14 +49,12 @@ body {
 
 .tagline { 
   color: #00acc1;
+  font-weight: bold;
 }
 
-footer {
-  margin-top: auto; /* コンテンツの最後に押し出す */
-  margin-bottom: 3rem; /* 最下部から少し上に余白を入れる */
-}
-
-/* グリッド（統一ルール） */
+/* ============================= */
+/* グリッド                      */
+/* ============================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* PCは3列 */
@@ -59,6 +62,9 @@ footer {
   padding: 0.7rem;
 }
 
+/* ============================= */
+/* レスポンシブ対応              */
+/* ============================= */
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .grid {
@@ -89,14 +95,16 @@ footer {
   }
 }
 
-/* カード */
+/* ============================= */
+/* カード                        */
+/* ============================= */
 .card {
   display: flex;
   flex-direction: column;
   background: #ffffff;
   border-radius: 1rem;
   padding: 1rem 1rem 0.1rem 1rem;
-  border: 3px solid #80deea;
+  border: 3px solid #80deea; /* 九州・沖縄カラー */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -105,7 +113,7 @@ footer {
 }
 
 .card .thumb {
-  width: 80%;          /* 統一ルール：画像は80% */
+  width: 80%; /* 統一ルール：画像は80% */
   height: auto;
   display: block;
   margin: 0 auto 0.1rem auto;
@@ -131,7 +139,9 @@ footer {
   line-height: 1.6;
 }
 
-/* 九州・沖縄専用戻るボタン */
+/* ============================= */
+/* 九州・沖縄専用戻るボタン      */
+/* ============================= */
 .back-button.kyushu-okinawa {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -147,6 +157,14 @@ footer {
 .back-button.kyushu-okinawa:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* フッター                      */
+/* ============================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 3rem;
 }
 
 </style>
